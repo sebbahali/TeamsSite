@@ -28,6 +28,7 @@ class ClubController extends APIController
             $info = $team->clubTeamMessages()->latest()->search($request, $team)->paginate(10);
 
         }
+        
         return $this->response([
             'status' => true,
             'message' => __('messages.success'),
